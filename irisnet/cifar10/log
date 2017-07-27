@@ -1,0 +1,27 @@
+2017-07-28 01:52:30,135 Node[0] start with arguments Namespace(batch_size=64, data_dir='cifar10/', gpus='0,1,2,3', kv_store='local', load_epoch=None, log_dir='cifar10', log_file='log', lr=0.01, model_prefix=None, num_epochs=300, num_examples=50000, save_model_prefix=None)
+2017-07-28 01:53:29,708 Node[0] start with arguments Namespace(batch_size=64, data_dir='/home/comp/csgcmai/project/database/iris/ice2006/', gpus='0,1,2,3', kv_store='local', load_epoch=None, log_dir='cifar10', log_file='log', lr=0.01, model_prefix=None, num_epochs=300, num_examples=50000, save_model_prefix=None)
+2017-07-28 01:56:08,690 Node[0] start with arguments Namespace(batch_size=64, data_dir='/home/comp/csgcmai/project/database/iris/ice2006/', gpus='0,1,2,3', kv_store='local', load_epoch=None, log_dir='cifar10', log_file='log', lr=0.01, model_prefix=None, num_epochs=300, num_examples=50000, save_model_prefix=None)
+2017-07-28 01:59:23,882 Node[0] start with arguments Namespace(batch_size=64, data_dir='/home/comp/csgcmai/project/database/iris/ice2006/', gpus='0,1,2,3', kv_store='local', load_epoch=None, log_dir='cifar10', log_file='log', lr=0.01, model_prefix=None, num_epochs=300, num_examples=50000, save_model_prefix=None)
+2017-07-28 02:01:45,362 Node[0] start with arguments Namespace(batch_size=64, data_dir='/home/comp/csgcmai/project/database/iris/ice2006/', gpus='0,1,2,3', kv_store='local', load_epoch=None, log_dir='cifar10', log_file='log', lr=0.01, model_prefix=None, num_epochs=300, num_examples=50000, save_model_prefix=None)
+2017-07-28 02:08:12,492 Node[0] start with arguments Namespace(batch_size=64, data_dir='/home/comp/csgcmai/project/database/iris/ice2006/', gpus='0,1,2,3', kv_store='local', load_epoch=None, log_dir='cifar10', log_file='log', lr=0.01, model_prefix=None, num_epochs=300, num_examples=50000, save_model_prefix=None)
+2017-07-28 02:10:38,254 Node[0] start with arguments Namespace(batch_size=64, data_dir='/home/comp/csgcmai/project/database/iris/ice2006/', gpus='0,1,2,3', kv_store='local', load_epoch=None, log_dir='cifar10', log_file='log', lr=0.01, model_prefix=None, num_epochs=300, num_examples=50000, save_model_prefix=None)
+2017-07-28 02:10:46,866 Node[0] Start training with [gpu(0), gpu(1), gpu(2), gpu(3)]
+2017-07-28 02:13:41,431 Node[0] start with arguments Namespace(batch_size=64, data_dir='/home/comp/csgcmai/project/database/iris/ice2006/', gpus='0,1,2,3', kv_store='local', load_epoch=None, log_dir='cifar10', log_file='log', lr=0.01, model_prefix=None, num_epochs=300, num_examples=50000, save_model_prefix=None)
+2017-07-28 02:13:47,029 Node[0] Start training with [gpu(0), gpu(1), gpu(2), gpu(3)]
+2017-07-28 02:16:36,205 Node[0] start with arguments Namespace(batch_size=64, data_dir='/home/comp/csgcmai/project/database/iris/ice2006/', gpus='0,1,2,3', kv_store='local', load_epoch=None, log_dir='cifar10', log_file='log', lr=0.01, model_prefix=None, num_epochs=300, num_examples=50000, save_model_prefix=None)
+2017-07-28 02:16:41,686 Node[0] Start training with [gpu(0), gpu(1), gpu(2), gpu(3)]
+2017-07-28 02:18:46,463 Node[0] start with arguments Namespace(batch_size=64, data_dir='/home/comp/csgcmai/project/database/iris/ice2006/', gpus='0,1,2,3', kv_store='local', load_epoch=None, log_dir='cifar10', log_file='log', lr=0.01, model_prefix=None, num_epochs=300, num_examples=50000, save_model_prefix=None)
+2017-07-28 02:18:51,730 Node[0] Start training with [gpu(0), gpu(1), gpu(2), gpu(3)]
+2017-07-28 02:20:11,397 Node[0] start with arguments Namespace(batch_size=64, data_dir='/home/comp/csgcmai/project/database/iris/ice2006/', gpus='0,1,2,3', kv_store='local', load_epoch=None, log_dir='cifar10', log_file='log', lr=0.01, model_prefix=None, num_epochs=300, num_examples=50000, save_model_prefix=None)
+2017-07-28 02:20:16,861 Node[0] Start training with [gpu(0), gpu(1), gpu(2), gpu(3)]
+2017-07-28 02:21:08,111 Node[0] start with arguments Namespace(batch_size=64, data_dir='/home/comp/csgcmai/project/database/iris/ice2006/', gpus='0,1,2,3', kv_store='local', load_epoch=None, log_dir='cifar10', log_file='log', lr=0.01, model_prefix=None, num_epochs=300, num_examples=50000, save_model_prefix=None)
+2017-07-28 02:21:13,865 Node[0] Start training with [gpu(0), gpu(1), gpu(2), gpu(3)]
+2017-07-28 02:22:26,709 Node[0] start with arguments Namespace(batch_size=64, data_dir='/home/comp/csgcmai/project/database/iris/ice2006/', gpus='0,1,2,3', kv_store='local', load_epoch=None, log_dir='cifar10', log_file='log', lr=0.01, model_prefix=None, num_epochs=300, num_examples=50000, save_model_prefix=None)
+2017-07-28 02:22:33,330 Node[0] Start training with [gpu(0), gpu(1), gpu(2), gpu(3)]
+2017-07-28 02:23:23,909 Node[0] Epoch[0] Batch [50]	Speed: 77.46 samples/sec	accuracy=0.006562
+2017-07-28 02:24:06,117 Node[0] Epoch[0] Batch [100]	Speed: 75.82 samples/sec	accuracy=0.015625
+2017-07-28 02:24:48,370 Node[0] Epoch[0] Batch [150]	Speed: 75.74 samples/sec	accuracy=0.027813
+2017-07-28 02:25:30,632 Node[0] Epoch[0] Batch [200]	Speed: 75.72 samples/sec	accuracy=0.036562
+2017-07-28 02:26:12,886 Node[0] Epoch[0] Batch [250]	Speed: 75.73 samples/sec	accuracy=0.057500
+2017-07-28 02:26:55,146 Node[0] Epoch[0] Batch [300]	Speed: 75.72 samples/sec	accuracy=0.060000
+2017-07-28 02:27:37,411 Node[0] Epoch[0] Batch [350]	Speed: 75.71 samples/sec	accuracy=0.073438
