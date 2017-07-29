@@ -65,10 +65,11 @@ def PrintShapes(symbol, executor):
 # Note that the random circular shift is implemented here
 # The random seed is set by numpy
 class IrisIter(mx.io.DataIter):
-    def __init__(self, irisIter, maskIter, batch_size):
+    def __init__(self, irisIter, maskIter, batch_size, randshift=True):
         super(IrisIter, self).__init__(batch_size)
         self.irisIter = irisIter
         self.maskIter = maskIter
+        self.randshift = randshift
         
         data_name = irisIter.provide_data[0][0]
         data_shape = irisIter.provide_data[0][1]
@@ -93,10 +94,13 @@ class IrisIter(mx.io.DataIter):
             iris_label = self.irisIter.getlabel()
             mask_label = self.maskIter.getlabel()
             #assert iris_label.asnumpy() == mask_label.asnumpy()
-            tmp_data = mx.nd.concat(iris,mask,dim=1).asnumpy()
-            rand_shift = np.random.randint(-self.shift_max,self.shift_max)
-            rand_shift = rand_shift if rand_shift>=0 else rand_shift + self.width
-            self.cur_data = [mx.nd.array(tmp_data[:,:,:,range(rand_shift,self.width)+range(rand_shift)])]
+            tmp_data = mx.nd.concat(iris,mask,dim=1).asnumpy()/255.
+            if self.randshift:
+                rand_shift = np.random.randint(-self.shift_max,self.shift_max)
+                rand_shift = rand_shift if rand_shift>=0 else rand_shift + self.width
+                self.cur_data = [mx.nd.array(tmp_data[:,:,:,range(rand_shift,self.width)+range(rand_shift)])]
+            else:
+                self.cur_data = [mx.nd.array(tmp_data)]
             self.cur_label = [iris_label]
             return True
         else:
@@ -154,20 +158,22 @@ def get_iterator(args, kv):
         batch_size=args.batch_size,
         num_parts=kv.num_workers,
         part_index=kv.rank,
+        shuffle=False,
         **kargs
     )
 
     valMask = mx.io.ImageRecordIter(
-        path_imgrec=args.data_dir + 'ice2006iris_test.rec',
+        path_imgrec=args.data_dir + 'ice2006mask_test.rec',
         rand_crop=False,
         rand_mirror=False,
         batch_size=args.batch_size,
         num_parts=kv.num_workers,
         part_index=kv.rank,
+        shuffle=False,
         **kargs
     )
 
-    val = IrisIter(valIris,valMask, args.batch_size)
+    val = IrisIter(valIris,valMask, args.batch_size, False)
     return (train, val)
 
 
@@ -418,6 +424,6 @@ mx.rnd.seed(2017)
 
 # network
 from symbol_densenet import get_symbol
-net = get_symbol(712,4,12,12)
+net,_ = get_symbol(712,4,12,12,dropout=0.5)
 fit(args, net, get_iterator)
 
